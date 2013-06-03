@@ -88,6 +88,7 @@ Tweaks and modifications to the markup can be made as follows:
 * [Nick Roseboro's Blog](http://blog.nickroseboro.com/)
 * [Distrify Blog](http://blog.distrify.com/)
 * [Vash Blog](http://blog.vash.co/)
+* [Geoff's Blog](http://ifish12.me/)
 * _... your site? fork and submit a pull request with your site listed here_ 
 
 
