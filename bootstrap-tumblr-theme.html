@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+<html>
   <head> 
-
-    <!-- TUMBLR APPEARANCE OPTIONS -->
-
-    <!-- General -->
+ 
     <meta name="text:Google Analytics UA Code" content="" /> 
     <meta name="image:Background" content="http://static.tumblr.com/vv8cdma/Ddzm1ypam/chruch.png" />
     <meta name="text:Application Stylesheet URL" content="" />
     <meta name="if:Show Description On Index" content="1" />
-    <meta name="if:Use Responsive Styles" content="1" />
 
     <!-- Sharing Buttons -->
     <meta name="if:Show Tweet Button" content="1"/>
@@ -17,14 +14,8 @@
     <meta name="text:Tweet Follow Account" content=""/>
     <meta name="if:Show Like Button" content="1"/>
 
-    <!-- Accompanying App? -->
-    <meta name="if:Link Logo To Application" content="0" />
-    <meta name="text:Application URL" content="" />
-
     <!-- Comments -->
     <meta name="text:Disqus Shortname" content=""/>
-
-    <!-- END TUMBLR APPEARANCE OPTIONS -->
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
     <meta name="description" content="{MetaDescription}" /> 
@@ -36,16 +27,7 @@
 
     <!-- ======== STYLES ======== -->
 
-    {block:IfUseResponsiveStyles}
-    <link href="http://static.tumblr.com/vv8cdma/X49m6e0kl/bootstrap.min.css" rel="stylesheet">
-    {/block:IfUseResponsiveStyles}
-    {block:IfNotUseResponsiveStyles}
-    <link href="http://static.tumblr.com/vv8cdma/dtnm6e0lb/bootstrap.min.css" rel="stylesheet">
-    {/block:IfNotUseResponsiveStyles}
-    
-    <!-- Font Awesome - http://fortawesome.github.com/Font-Awesome -->
-    <link href="http://static.tumblr.com/vv8cdma/c18m6e0y9/font-awesome.css" rel="stylesheet">
-
+    <link href="http://static.tumblr.com/vv8cdma/Pigm0fc2m/bootstrap.min.css" rel="stylesheet">
     <style type="text/css">
       
       /* --- high-level --- */
@@ -53,13 +35,6 @@
         padding-top: 60px; /* room for fixed nav-bar */
         background-image: url('{image:Background}'); 
       } 
-      {block:IfUseResponsiveStyles}
-      @media (max-width:979px) {
-        body {
-          padding-top: 0;
-        }
-      }
-      {/block:IfUseResponsiveStyles}
       
       /* --- tags --- */
       .tags { margin-bottom: 10px;}
@@ -70,7 +45,6 @@
       .entry > * { padding-left: 20px; padding-right: 20px; }
       .date { margin-bottom: 10px; }
       .entry .title { margin-bottom: 10px; }
-      .entry h2:first-of-type { margin-top: 0; }
       .entry h2 { margin-top: 20px; }
       
       /* --- speech bubble: visually connects entries to authors --- */ 
@@ -98,6 +72,7 @@
       .share-links { margin-top: 10px; }
 
     </style>
+    <link href="http://static.tumblr.com/vv8cdma/pVJm0fbxk/bootstrap-responsive.min.css" rel="stylesheet">
 
     {block:IfApplicationStylesheetURL}
     <!-- Import application styling -->
@@ -135,24 +110,12 @@
               <span class="icon-bar"></span>
             </a>
 
-            <a class="brand" 
-              {block:IfLinkLogoToApplication}href="{text:Application URL}"{/block:IfLinkLogoToApplication} 
-              {block:IfNotLinkLogoToApplication}href="/"{/block:IfNotLinkLogoToApplication} 
-            >
+            <a class="brand" href="/">
               {Title}
             </a>
 
             <div class="nav-collapse">
               <ul class="nav">
-                {block:IfLinkLogoToApplication}
-                  <li>
-                    <a href="/">
-                      Blog
-                    </a>
-                  </li>
-                  <li class="divider-vertical"></li>
-                {/block:IfLinkLogoToApplication}                
-
                 {block:English}
                   <li>
                     <a href="http://tumblr.com/follow/{Name}">
@@ -177,10 +140,12 @@
                 <li class="divider-vertical"></li>
                 
                 <li>
-                  <a href="/ask">Ask Me Anything</a>
+                  <a href="/ask">Ask</a>
                 </li>
                 {/block:AskEnabled}
-   <li class="divider-vertical"></li>     
+                
+                
+         <li class="divider-vertical"></li>     
         <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               Other sites
@@ -188,14 +153,14 @@
               </a>
             <ul class="dropdown-menu">
               <li>
-              <a href="https://github.com/ifish12">Github</a>
+              <a href="https://github.com/ifish12" target="_blank">Github</a>
               
               <li>
-              <a href="https://twitter.com/ifish12">Twitter</a>
+              <a href="https://twitter.com/ifish12" target="_blank">Twitter</a>
               </li>
               
               <li>
-              <a href="https://twitch.tv/ifish49">Twich</a>
+              <a href="https://twitch.tv/ifish49" target="_blank">Twich</a>
               </li>
               
               </li>
@@ -217,12 +182,17 @@
               </li>
               
               <li>
+              <a href="/tagged/selfie">Awkward Selfies</a>
+              </li>
+              
+              <li>
               <a href="/tagged/League-of-Legends">League of Legends</a>
               </li>
               
               </li>
             </ul>
          </li>
+
                 {block:SubmissionsEnabled}
                 <li class="divider-vertical"></li>
               
@@ -578,7 +548,7 @@
                   
         </div> <!-- .row .post -->
 
-        {block:PermalinkPagination} 
+        {block:PermalinkPage} 
         {block:IfDisqusShortname}
         <div class="row">
           <div class="span10 offset2 comments-container">
@@ -588,7 +558,7 @@
           </div> <!-- .comments-container -->
         </div>
         {/block:IfDisqusShortname}
-        {/block:PermalinkPagination} 
+        {/block:PermalinkPage} 
 
         {block:NoteCount}
         <div class="row">
@@ -618,7 +588,7 @@
 
       <footer class="footer">
         <p class="pull-right"><a href="#">Back to top</a></p>
-        <p><a href="https://github.com/mikejarema/bootstrap-tumblr-theme/">Bootstrap Tumblr Theme</a> by <a href="http://mikejarema.com">Mike Jarema</a>.</p>
+        <p><a href="https://github.com/ifish12/bootstrap-tumblr-theme">Bootstrap Tumblr Theme</a> by <a href="https://github.com/ifish12/">Geoff Shapiro</a>. Edited from <a href="https://mikejarema.com">Mike Jarema</a>.</p>
         <p>{lang:Powered by Tumblr 2}.</p>
       </footer>
       
@@ -639,8 +609,8 @@
 
     <!-- ======== SCRIPTS ======== -->
 
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script type="text/javascript" src="http://static.tumblr.com/vv8cdma/1HKm6e0ok/bootstrap.min.js"></script>    
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://static.tumblr.com/vv8cdma/obbm0fc3v/bootstrap.min.js"></script>    
 
     {block:IfShowTweetButton}
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
