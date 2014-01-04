@@ -4,7 +4,7 @@
   <head> 
  
     <meta name="text:Google Analytics UA Code" content="" /> 
-    <meta name="image:Background" content="http://static.tumblr.com/vv8cdma/Ddzm1ypam/chruch.png" />
+    <meta name="image:Background" content="http://static.tumblr.com/vv8cdma/Ddzm1ypam/chruch.png" /> 
     <meta name="text:Application Stylesheet URL" content="" />
     <meta name="if:Show Description On Index" content="1" />
 
@@ -27,7 +27,7 @@
 
     <!-- ======== STYLES ======== -->
 
-    <link href="http://static.tumblr.com/vv8cdma/X49m6e0kl/bootstrap.min.css" rel="stylesheet">
+    <link href="http://static.tumblr.com/gjwuv8i/3EKmyv5u9/bootstrap.min.css" rel="stylesheet">
     <style type="text/css">
       
       /* --- high-level --- */
@@ -72,7 +72,7 @@
       .share-links { margin-top: 10px; }
 
     </style>
-    <link href="http://static.tumblr.com/vv8cdma/pVJm0fbxk/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="http://static.tumblr.com/vv8cdma/pVJm0fbxk/bootstrap-responsive.min.css" rel="stylesheet"> 
 
     {block:IfApplicationStylesheetURL}
     <!-- Import application styling -->
@@ -100,142 +100,61 @@
     {/block:IfShowLikeButton}
 
     <header>
-      <div class="navbar navbar-fixed-top">
-        <div class="navbar-inner">
-          <div class="container">
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
 
-            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </a>
+          </button>
+          <a class="navbar-brand" href="http://gshap.me">Geoff's blag</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            
+            <li><a href="/about">About me</a></li>
+            <li><a href="/archive">{lang:Archive}</a></li>
+            <li><a href="/ask">Ask</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other sites<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                <li><a href="https://github.com/ifish12" target="_blank">Github</a></li>
+                <li><a href="https://twitter.com/ifish12" target="_blank">Twitter</a></li>
+                <li><a href="https://twitch.tv/ifish49" target="_blank">Twitch</a></li>
+                <li> <a href="https://steamcommunity.com/id/iFish12" target="_blank">Steam</a></li>
+                </ul>
+          </li>
+        
 
-            <a class="brand" href="/">
-              {Title}
-            </a>
 
-            <div class="nav-collapse">
-              <ul class="nav">
-                {block:English}
-                  <li class="divider-vertical"></li>
-                  <li>
-                    <a href="http://tumblr.com/follow/{Name}">
-                      Follow
-                    </a>
-                  </li>
-                {/block:English}
-                {block:NotEnglish}
-                <li>
-                  <a href="http://tumblr.com/follow/{Name}">{lang:Follow me}</a>
-                </li>
-                {/block:NotEnglish}
+      <form class="navbar-form pull-right" role="form">
+      <div class="form-group">
+             <input type="text" class="form-control" placeholder="Search" id="search" name="q" value="" > </div>
+         </form>
 
-                <li class="divider-vertical"></li>
-                
-                <li>
-                  <a href="/archive">{lang:Archive}</a>
-                </li>
-                
-                {block:AskEnabled}
-                <li class="divider-vertical"></li>
-                
-                <li>
-                  <a href="/ask">Ask</a>
-                </li>
-                {/block:AskEnabled}
-                
-                
-         <li class="divider-vertical"></li>     
-        <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              Other sites
-              <b class="caret"></b>
-              </a>
-            <ul class="dropdown-menu">
-              <li>
-              <a href="https://github.com/ifish12" target="_blank">Github</a>
-              
-              <li>
-              <a href="https://twitter.com/ifish12" target="_blank">Twitter</a>
-              </li>
-              
-              <li>
-              <a href="https://twitch.tv/ifish49" target="_blank">Twitch</a>
-              </li>
-              
-              <li>
-              <a href="https://steamcommunity.com/id/iFish12" target="_blank">Steam</a>
-              </li>
-              
-              </li>
-            </ul>
-         </li>
-        <li class="divider-vertical"></li>
-         
-         <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              Tags
-              <b class="caret"></b>
-              </a>
-            <ul class="dropdown-menu">
-              <li>
-              <a href="/tagged/sunrise">Sunrise</a>
-              
-              <li>
-              <a href="/tagged/programming">Programming</a>
-              </li>
-              
-              <li>
-              <a href="/tagged/selfie">Awkward Selfies</a>
-              </li>
-              
-              <li>
-              <a href="/tagged/League-of-Legends">League of Legends</a>
-              </li>
-              
-              </li>
-            </ul>
-         </li>
-
-                {block:SubmissionsEnabled}
-                <li class="divider-vertical"></li>
-              
-                <li>
-                  <a href="/submit">Submit Something</a>
-                </li>
-                {/block:SubmissionsEnabled} 
-
-                {block:Pages}
-                <li class="divider-vertical"></li>
-                
-                <li>
-                  <a href="{URL}">{Label}</a>
-                </li>
-                {/block:Pages}
-              </ul>
     
-              <form class="navbar-search pull-right" action="/search" method="get">
-                <input type="text" class="search-query" placeholder="{lang:Search}..." id="search" name="q" value="" />
-              </form>
-            </div> <!-- nav-collapse -->
 
           </div> <!-- container -->
-        </div> <!-- navbar-inner -->
       </div> <!-- navbar navbar-fixed-top -->
     </header>
 
 
-    <div class="container">
+   
 
       {block:IndexPage}
       {block:IfShowDescriptionOnIndex}
-      <div class="hero-unit">
-        <h1>{Title}</h1>
-        <p>{Description}</p>
+      <div class="jumbotron">
+          <div class="container">
+                <h1>{Title}</h1>
+                <p>{Description}</p>
+          </div>
       </div>
       {/block:IfShowDescriptionOnIndex}
       {/block:IndexPage}
-
+    <div class="container">
       <div class="posts">
 
         {block:SearchPage}
@@ -266,7 +185,7 @@
         {block:Posts}
         <div class="row post {block:Text}text{/block:Text}{block:Photo}photo{/block:Photo}{block:Quote}quote{/block:Quote}{block:Video}video{/block:Video}{block:Link}link{/block:Link}{block:Chat}chat{/block:Chat}{block:Audio}audio{/block:Audio}{block:Answer}answer{/block:Answer}">  
 
-          <div class="span2">
+          <div class="col-md-2">
             {block:GroupMembers} 
             <div class="author">
               <a href="{PostAuthorURL}">
@@ -338,7 +257,7 @@
 
           </div> <!-- .span2 -->
 
-          <div class="span10 entry">
+          <div class="col-md-10 entry">
 
             {block:GroupMembers} 
             <div class="speech-bubble"></div>
@@ -413,7 +332,7 @@
               
               {block:Photo}
               
-                <div class="CENTER">
+                 <div class="CENTER">
               
                   {LinkOpenTag}<img alt="{PhotoAlt}" src="{PhotoURL-500}" />{LinkCloseTag}
 
@@ -551,6 +470,7 @@
           </div> <!-- .entry -->
                   
         </div> <!-- .row .post -->
+       
 
         {block:PermalinkPage} 
         {block:IfDisqusShortname}
@@ -614,7 +534,7 @@
     <!-- ======== SCRIPTS ======== -->
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script type="text/javascript" src="http://static.tumblr.com/vv8cdma/obbm0fc3v/bootstrap.min.js"></script>    
+    <script type="text/javascript" src="http://static.tumblr.com/gjwuv8i/noWmyv679/bootstrap.min.js"></script>    
 
     {block:IfShowTweetButton}
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
